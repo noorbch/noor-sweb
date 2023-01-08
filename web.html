@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylsheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css>
+    <link rel="stylsheet" href="./" />
+    <title>noor ben shiekkh</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      * {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+
+      header {
+        background-color: rgb(228, 222, 222);
+        width: 100%;
+        position: fixed;
+        z-index: 999;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 200px;
+      }
+      .logo {
+        text-decoration: none;
+        color: rgb(4, 7, 0);
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1.8em;
+      }
+      .navigation a {
+        color: rgb(6, 10, 0);
+        text-decoration: none;
+        font-size: 1.1em;
+        font-weight: 500;
+        padding-left: 30px;
+      }
+      .navigation a:hover {
+        color: #601cfc;
+      }
+      section {
+        padding: 100px 200px;
+      }
+      .main {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        background: url(images/portfolio.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+      .main h2 {
+        color: white;
+        font-size: 1.4em;
+        font-weight: 500;
+      }
+      .main h2 span {
+        display: inline-block;
+        margin-top: 10px;
+        color:  rgb(1, 235, 21);
+        font-size: 1.5em;
+        font-weight: 600;
+      }
+      .main h3 {
+        color: #fff;
+        font-size: 1.5em;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+      }
+      .main-btn {
+        color: aliceblue;
+        background-color:  rgb(1, 235, 21);
+        text-decoration: none;
+        font-size: 1.1em;
+        display: inline-block;
+        padding: 0.9375em 2.1875em;
+        letter-spacing: 1px;
+        border-radius: 15px;
+        margin-bottom: 40px;
+        transition: 0.7s ease;
+
+      }
+      .main-btn:hover{
+        background-color: rgb(26, 26, 26);
+        transform: scale(1.1);
+      }
+      .social-icons a {
+        color: #fff;
+        font-size: 1.7em;
+        padding-right: 30px;
+
+      }
+      .title{
+        display: flex;
+        justify-content: center;
+        color: rgb(1, 235, 21);
+        font-size: 2.2em;
+        font-weight: 800;
+        margin-bottom: 30px;
+      }
+      .content{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .card{
+        background-color: rgb(160, 158, 158);
+        width: 21.25em;
+        box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+        border-radius: 10px;
+        padding: 25px;
+        margin: 15px;
+        transition: 0.7s ease;
+      }
+      .card:hover{
+        transform: scale(1.1);
+
+      }
+      .icon{
+        color: black;
+        font-size: 6em;
+        text-align: center;
+      }
+      .info{
+        text-align: center;
+      }
+      .info h3{
+      color: rgb(5, 180, 19);
+      font-size: 1.5em;
+      font-weight: 700;
+      margin: 10px;
+      
+
+      }
+      .projects{
+        background-color: #222222;
+      }
+      .projects.content{
+        margin-top: 30px;
+      }
+      .project-card{
+        background-color: rgb(255, 255, 255);
+        border: 1px solid white;
+        min-height: 14em;
+        width: 23em;
+        overflow: hidden;
+        border-radius: 10px;
+        margin: 20px;
+        transition: 0.7s ease;
+      }
+      .project-card:hover{
+        transform: scale(1.1);
+      }
+      .project-card:hover .project-image{
+        opacity: 0.9;
+        
+      }
+      .project-image img{
+        width: 99%;
+      }
+      .project-info{
+        padding: 1em;
+      }
+      .project-category{
+        font-size: 0.8em;
+        color: rgb(13, 13, 14,);
+      }
+      .project-title{
+        display: flex;
+        justify-content: space-between;
+        text-transform: uppercase;
+        font-weight: 800;
+        margin-top: 10px;
+      }
+      .more-details{
+        text-decoration: none;
+        color:rgb(1, 235, 21);
+      }
+      .more-details:hover{
+        color:#1b1a1b;
+      }
+      .contact .icon{
+        font-size: 4.5em;
+
+      }
+      .contact.info h3{
+        color: black;
+      }
+      .contact.info p{
+       font-size: 1.5em;
+      }
+      .footer{
+        background-color: #222222;
+        color: #fff;
+        padding: 2em;
+        display: flex;
+        justify-content: space-between;
+      }
+      .footer-title{
+        font-size: 1.3em;
+        font-weight: 600;
+      }
+      .footer-title span{
+        color:rgb(1, 235, 21);
+      }
+      @media (max-width:1023px){
+        header{
+        padding: 12px 20px;
+      }
+      .navigation a{
+        padding: 10px;
+      }
+      .title{
+        font-size: 1.8em;
+      }
+      section{
+        padding: 80px 20px;
+      }
+      .main-content h2{
+        font-size: 1em;
+      }
+      .main-content h3{
+        font-size: 1.6em;
+      }
+      .content{
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    @media (max-width:641px){
+      body{
+        font-size: 12px;
+      }
+      .main-content h2{
+        font-size: 0.8em;
+      }
+      .main-content h3{
+        font-size: 0.4em;
+      }
+    }
+    @media (max-width:300px){
+      body{
+        font-size: 10px;
+      }
+    }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">noor</a>
+      <nav class="navigation">
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact </a>
+      </nav>
+    </header>
+    <section class="main">
+      <div>
+        <h2>
+          HELLO , I AM NOOR <br /><span>
+            A programmer ,developer and robot maker
+          </span>
+        </h2>
+        <h3>
+          i build websites make smart programmes using AI and i make robots
+        </h3>
+        <a href="#projects" class="main-btn"> view my work</a>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.facebook.com/noor.benshiekh/"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+      </div>
+    </section>
+    <section class="cards" id="services">
+      <h2 class="title">services</h2>
+      <div class="content">
+        <div class="card">
+          <div class="icon">
+            <i class="fa-sharp fa-solid fa-code"></i>
+          </div>
+          <div class="info">
+            <h3>websites builder</h3>
+            <p>i build websites using html,css and JavaScript</p>
+
+          </div>
+
+        </div>
+        <div class="card">
+          <div class="icon">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <div class="info">
+            <h3>robot maker</h3>
+            <p>i can make robots and i got 4 certificates on arduino</p>
+
+          </div>
+
+        </div>
+        <div class="card">
+          <div class="icon">
+            <i class="fa-solid fa-cubes"></i>
+          </div>
+          <div class="info">
+            <h3>3D designer</h3>
+            <p>i got diploma on 3D (solidworks) i can make simpl 3D design</p>
+
+          </div>
+
+        </div>
+        <div class="card">
+          <div class="icon">
+            <i class="fa-solid fa-terminal"></i>
+          </div>
+          <div class="info">
+            <h3>programmer</h3>
+            <p>i am programmer student i can write programme using python,C,C#</p>
+
+          </div>
+
+        </div>
+
+
+      </div>
+    </section>
+    <section class="projects" id="projects">
+      <h2 class="title">projects</h2>
+      <div class="content">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/msp.png" /></div>
+            <div class="project-info">
+              <p class=project-category> MSP my successful project </p>
+              <strong class="project-title">
+                <span>application mobile</span>
+                <a herf="#" class="more-details">More Details</a>
+              </strong>
+            
+        </div>
+      </div>
+
+
+            <div class="project-card">
+              <div class="project-image">
+                <img src="images/505.jpg" /></div>
+                <div class="project-info">
+                  <p class=project-category> codding room </p>
+                  <strong class="project-title">
+                    <span>youtube chanel</span>
+                    <a herf="#" class="more-details">More Details</a>
+                  </strong>
+                
+                </div>
+          
+            </div>    
+      
+
+            <div class="project-card">
+              <div class="project-image">
+                <img src="images/hnd.jpg" /></div>
+                <div class="project-info">
+                  <p class=project-category> my smart gloves </p>
+                  <strong class="project-title">
+                    <span>speaking glove</span>
+                    <a herf="#" class="more-details">More Details</a>
+                  </strong>
+                
+                </div>
+          
+            </div>   
+  
+    </section>
+    <section class="cards Contact" id="contact">
+      <h2 class="title"> LET'S WORK TOGETHER</h2>
+      
+      <div class="content">
+        <div class="card">
+          <div class="icon">
+            <i class="fa-solid fa-phone-flip"></i>
+          </div>
+          <div class="info">
+            <h3>Phone</h3>
+            <p>92980245</p>
+
+          </div>
+
+        </div>
+        <div class="card">
+          <div class="icon">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+        <div class="info">
+            <h3>Email</h3>
+            <p>chbenben45@gamil.com</p>
+
+        </div>
+        </div>
+
+    </section>
+<footer class="footer">
+  <p class="footer-title">Copyrights @ <span>nour zakia ben chiekh</span></p>
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+    <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+    
+  </div>
+</footer>
+  </body>
+</html>
